@@ -6,7 +6,7 @@ test("Chat shorthand", async ({ page }) => {
     name: "Input Your Singlish Text Here.",
   });
   await inputBox.fill("Thx bokka");
-  const outputText = page.getByText("ථx බොක්ක");
+  const outputText = page.getByText("තෑන්ක්ස් බොක්ක");
 
   await expect(outputText).toBeVisible();
 });
@@ -18,7 +18,7 @@ test("Multiline input", async ({ page }) => {
     name: "Input Your Singlish Text Here.",
   });
   await inputBox.fill("mama gedhara\\nyanavaa");
-  const outputText = page.getByText("මම ගෙදර\\න්යනවා");
+  const outputText = page.getByText("මම ගෙදර යනවා");
 
   await expect(outputText).toBeVisible();
 });
@@ -42,7 +42,7 @@ test("Slang heavy input", async ({ page }) => {
     name: "Input Your Singlish Text Here.",
   });
   await inputBox.fill("adoo bn eka hariyata karapan");
-  const outputText = page.getByText("අඩෝ බ්න් එක හරියට කරපන්");
+  const outputText = page.getByText("අඩෝ බන් එක හරියට කරපන්");
 
   await expect(outputText).toBeVisible();
 });
@@ -66,7 +66,7 @@ test("Numbers and dates", async ({ page }) => {
     name: "Input Your Singlish Text Here.",
   });
   await inputBox.fill("api 3 denek 25/12/2025 yamu");
-  const outputText = page.getByText("අපි 3 ඩෙනෙක් 25/12/2025 යමු");
+  const outputText = page.getByText("අපි 3 දෙනෙක් 25/12/2025 යමු");
 
   await expect(outputText).toBeVisible();
 });
@@ -78,7 +78,7 @@ test("Typographical errors", async ({ page }) => {
     name: "Input Your Singlish Text Here.",
   });
   await inputBox.fill("mammaa geddhara yannava");
-  const outputText = page.getByText("මම්මා ගෙඩ්දර යන්නව");
+  const outputText = page.getByText("මම ගෙදර යනවා");
 
   await expect(outputText).toBeVisible();
 });
